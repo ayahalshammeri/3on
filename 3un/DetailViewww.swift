@@ -21,10 +21,7 @@ struct DetailViewww: View {
                         Image("teser")
                             .offset(x: -50)
                         
-                        //اخلي الكلام يبين☄️☄️☄️☄️☄️☄️☄️
-                    }
-                    
-                    //اخليه من اليمين لين اليسار   ☄️☄️☄️☄️☄️☄️
+                                        }
                     
                     
                     
@@ -34,20 +31,34 @@ struct DetailViewww: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 300, height: 300)
+                            // here is the code to copy just paste it everywhere + maybe add an note
+                                .onTapGesture {
+                                        UIPasteboard.general.string = "5797345"
+                                }
                             Image("rec2")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 300, height: 300)
+                                .onTapGesture {
+                                        UIPasteboard.general.string = "9373947"
+                                }
                             
                             Image("rec3")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 300, height: 300)
+                                .onTapGesture {
+                                        UIPasteboard.general.string = "9373947"
+                                }
                             
                             Image("rec4")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 300, height: 300)
+                                .onTapGesture {
+                                        UIPasteboard.general.string = "9373947"
+                                }
+                               
                         }
                         
                     }
@@ -66,21 +77,34 @@ struct DetailViewww: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 300, height: 300)
+                                .onTapGesture {
+                                        UIPasteboard.general.string = "8727455"
+                                }
+                               
                             Image("rec6")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 300, height: 300)
-                            
+                                .onTapGesture {
+                                        UIPasteboard.general.string = "71645809"
+                                }
+                               
                             Image("rec7")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 300, height: 300)
-                            
+                                .onTapGesture {
+                                        UIPasteboard.general.string = "6357214"
+                                }
+                               
                             Image("rec8")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 300, height: 300)
-                            
+                                .onTapGesture {
+                                        UIPasteboard.general.string = "8769054"
+                                }
+                               
                         }
                         
                     }
@@ -91,35 +115,13 @@ struct DetailViewww: View {
             
             
         }
-        //تاب بار☄️☄️☄️☄️☄️☄️☄️☄️☄️
-        //                    TabView {
-        //                        DetailView()
-        //                            .tabItem {
-        //                                Label("home", systemImage: "house")
-        //                            }
-        //                        HomeView()
-        //                            .tabItem {
-        //                                Label("pay", systemImage: "dollarsign.circle.fill")
-        //                            }
-        //                    }
-        
-        
-        TabView{
-            
-            DetailViewww()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("home")
-                }
-            
-            HomeView()
-                .tabItem {
-                    Image(systemName: "dollarsign.circle.fill")
-                    Text("pay")
-                }
-        }
         
     }
     
 }
 
+struct DetailViewww_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailViewww()
+    }
+}

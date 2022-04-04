@@ -22,7 +22,7 @@ struct PayMentt: View {
         
         ZStack{
             
-        
+            
         VStack {
             CreditCard {
                 
@@ -68,32 +68,22 @@ struct PayMentt: View {
             } onCommit: {}
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding([.leading,.trailing])
+            Button {
+                isPresented = true
+            } label: {
+                Text("ادفع").padding().background(Color.appColor).foregroundColor(Color.white).cornerRadius(50, antialiased: false)
+            }.alert("تم التبرّع!", isPresented: $isPresented) {
+                Button("الغاء") { }
+            }
+
+                    }
+                }
             
         }
     
-    Spacer()
-        Button("ادفع"){
-            //اسوي الادت عالبتن☄️☄️☄️☄️☄️☄️☄️☄️☄️
-
-//          .font(.system(size: 25))
-//            .font(.title3)
-//            .fontWeight(.bold)
-//            .foregroundColor(Color.white)
-
-        
-            isPresented = true
-                }
-                .alert("تم التبرّع!", isPresented: $isPresented) {
-                    Button("الغاء") { }
-                }
-            }
-        }
+  
 }
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+
 
 struct PayMentt_Previews: PreviewProvider {
     static var previews: some View {

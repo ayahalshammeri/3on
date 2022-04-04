@@ -63,6 +63,7 @@ struct CreditCardFront: View {
                         .offset(x: 10, y: -100)
                 
                 }
+                VStack{
                 VStack(alignment: .leading) {
                     Text("CARD HOLDER")
                         .font(.caption)
@@ -74,7 +75,7 @@ struct CreditCardFront: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
                         .offset(x: -100)
-
+                }
                 }
                 
                 Spacer()

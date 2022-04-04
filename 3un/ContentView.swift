@@ -18,19 +18,22 @@ struct ContentView: View {
                 Image("p1")
                     .ignoresSafeArea()
                 
-                NavigationLink(destination: PayMentt()){
+                NavigationLink(destination: MainView()){
                     //   HomeViewww      DetailView
                     
                     Image("btn1")
-                    //البتن ماتنضغط☄️☄️☄️☄️☄️☄️☄️
                     
-                }        .offset(y: 250)
-
+                }.offset(y: 250)
                 .navigationTitle(Text("ّ"))
             }
             
-        }
+        }.accentColor(.appColor2)
         
     }
     
+}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

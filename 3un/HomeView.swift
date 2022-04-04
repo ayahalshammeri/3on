@@ -12,84 +12,87 @@ struct HomeView: View {
     @State var name = ""
     @State var email = ""
     @State var money = ""
+    @State var isShown = false
     var body: some View {
-        NavigationView{
+ 
             
             ZStack{
-                Image("p3")
-                    .ignoresSafeArea()
+                Image("p2").edgesIgnoringSafeArea(.all)
                 
-                //مشكلة الصورة☄️☄️☄️☄️☄️☄️☄️☄️☄️
                 
                 VStack{
-                    Form {
-                        Section {
-                            TextField("ادخل رقم الفاتورة",
-                                      text: $fatorah)
-                                .font(.system(size: 25))
-                                            
-                            TextField("اسمك",
-                                      text: $name)
-                            
-                                .font(.system(size: 25))
-                            TextField("بريدك الالكتروني",
-                                      text: $email)
-                                .font(.system(size: 25))
-
-                            TextField("ادخل المبلغ المراد التبرّع به",
-                                      text: $money)
-                                .font(.system(size: 25))
-                            //اصغر حجمه☄️☄️☄️☄️☄️☄️☄️☄️☄️
-                            
-                            
-//                                .frame(width: 20, height: 15, alignment: .center)
-
-                        
-                            
-                        }
-                        
-                    }
+                    VStack{
+                    TextField("ادخل رقم الفاتورة",
+                              text: $fatorah)
+                    .font(.system(size: 20)).underlineTextField()
+                    TextField("اسمك",
+                              text: $name)
                     
+                    .font(.system(size: 20)).underlineTextField()
+                    TextField("بريدك الالكتروني",
+                              text: $email)
+                    .font(.system(size: 20)).underlineTextField()
                     
-                        NavigationLink(destination: PayMentt()){
+                    TextField("ادخل المبلغ المراد التبرّع به",
+                              text: $money)
+                    .font(.system(size: 20)).underlineTextField()
+                    }.padding([.leading,.trailing,.top],40)
+                    HStack{
                             Image("btn2")
-                    .padding(50)
-                        }
-                        .navigationTitle(Text("ّ"))
+                            .padding(50).onTapGesture {
+                                isShown = true
+                            }.sheet(isPresented: $isShown) {
+                                PayMentt()
+                            }
+                      
+                        
                     }
                     
                     
-                    
-                    ////////////////////////////
-                    //                            Button(action: {
-                    //
-                    //                        }, label: {
-                    //                         Text("الدفع!")
-                    //                                .font(.system(size: 30))
-                    //                            //اخليه بس تكست☄️☄️☄️☄️☄️☄️☄️☄️☄️
-                    //                                .frame(width: 70, height: 50, alignment: .center)
-                    //                                .background(Color(red: 234, green: 178, blue: 76))
-                    //                                .foregroundColor(.yellow)
-                    //                                  .cornerRadius(15)
-                    
-                    //                        })
+                
                 }
                 
                 
             }
             
             
-        }
+        
         
     }
     
+}
 
 
 
+struct customViewModifier: ViewModifier {
+    var roundedCornes: CGFloat
+    var startColor: Color
+    var endColor: Color
+    var textColor: Color
+    
+    func body(content: Content) -> some View {
+        content
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [startColor, endColor]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .cornerRadius(roundedCornes)
+            .padding(3)
+            .overlay(RoundedRectangle(cornerRadius: roundedCornes)
+                        .stroke(LinearGradient(gradient: Gradient(colors: [startColor, endColor]), startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 2))
+            .font(.custom("Open Sans", size: 18))
+            .foregroundColor(Color.white)
+            .shadow(radius: 10)
+    }
+}
 
-
-
-
+extension View {
+    func underlineTextField() -> some View {
+        self
+            .padding(.vertical, 10)
+            .overlay(Rectangle().frame(height: 2).padding(.top, 35))
+            .foregroundColor(.appColor)
+            .padding(10)
+    }
+}
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

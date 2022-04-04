@@ -15,6 +15,8 @@
 		C09C211427FB7D6F004ACCE1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09C211327FB7D6F004ACCE1 /* HomeView.swift */; };
 		C09C211627FB7DAC004ACCE1 /* PayMentt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09C211527FB7DAC004ACCE1 /* PayMentt.swift */; };
 		C09C211827FB7E22004ACCE1 /* DetailViewww.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09C211727FB7E22004ACCE1 /* DetailViewww.swift */; };
+		C09C211A27FB98DA004ACCE1 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09C211927FB98DA004ACCE1 /* MainView.swift */; };
+		C09C211C27FB9921004ACCE1 /* colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09C211B27FB9921004ACCE1 /* colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		C09C211327FB7D6F004ACCE1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C09C211527FB7DAC004ACCE1 /* PayMentt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayMentt.swift; sourceTree = "<group>"; };
 		C09C211727FB7E22004ACCE1 /* DetailViewww.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewww.swift; sourceTree = "<group>"; };
+		C09C211927FB98DA004ACCE1 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C09C211B27FB9921004ACCE1 /* colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				C09C211727FB7E22004ACCE1 /* DetailViewww.swift */,
 				C09C211527FB7DAC004ACCE1 /* PayMentt.swift */,
 				C09C211327FB7D6F004ACCE1 /* HomeView.swift */,
+				C09C211927FB98DA004ACCE1 /* MainView.swift */,
+				C09C211B27FB9921004ACCE1 /* colors.swift */,
 				C08F062227F1379A005F8B3E /* DetailView.swift */,
 				C08F061827F13120005F8B3E /* Assets.xcassets */,
 				C08F061A27F13120005F8B3E /* Preview Content */,
@@ -150,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C08F061727F1311D005F8B3E /* ContentView.swift in Sources */,
+				C09C211C27FB9921004ACCE1 /* colors.swift in Sources */,
+				C09C211A27FB98DA004ACCE1 /* MainView.swift in Sources */,
 				C09C211427FB7D6F004ACCE1 /* HomeView.swift in Sources */,
 				C08F062327F1379A005F8B3E /* DetailView.swift in Sources */,
 				C09C211827FB7E22004ACCE1 /* DetailViewww.swift in Sources */,
