@@ -14,7 +14,7 @@ struct ContentView: View {
                 Image("p1")
                     .ignoresSafeArea()
                 
-                NavigationLink(destination: HomeView()){
+                NavigationLink(destination: DetailView()){
                     //   HomeView      DetailView
                     
                     Image("btn1")
@@ -120,35 +120,34 @@ struct DetailView: View {
         //تاب بار☄️☄️☄️☄️☄️☄️☄️☄️☄️
         
         
-        //            TabView {
-        //                DetailView()
-        //                    .tabItem {
-        //                        Label("home", systemImage: "house")
-        //                    }
-        //                HomeView()
-        //                    .tabItem {
-        //                        Label("pay", systemImage: "dollarsign.circle.fill")
-        //                    }
-        //            }
+//                    TabView {
+//                        DetailView()
+//                            .tabItem {
+//                                Label("home", systemImage: "house")
+//                            }
+//                        HomeView()
+//                            .tabItem {
+//                                Label("pay", systemImage: "dollarsign.circle.fill")
+//                            }
+//                    }
         
         
+
         
+                     TabView{
         
+                                                    DetailView()
+                                                        .tabItem {
+                                                            Image(systemName: "house")
+                                                            Text("home")
+                                                        }
         
-        //             TabView{
-        //
-        //                                            DetailView()
-        //                                                .tabItem {
-        //                                                    Image(systemName: "house")
-        //                                                    Text("home")
-        //                                                }
-        //
-        //                                                    HomeView()
-        //                                                .tabItem {
-        //                                        Image(systemName: "dollarsign.circle.fill")
-        //                                        Text("pay")
-        //                                                }
-        //                                        }
+                                                            HomeView()
+                                                        .tabItem {
+                                                Image(systemName: "dollarsign.circle.fill")
+                                                Text("pay")
+                                                        }
+                                                }
         
     }
     
@@ -174,8 +173,8 @@ struct HomeView: View {
                         Section {
                             TextField("ادخل رقم الفاتورة",
                                       text: $fatorah)
-                            
                                 .font(.system(size: 25))
+                                            
                             TextField("اسمك",
                                       text: $name)
                             
@@ -329,4 +328,3 @@ struct ContentView_Previews: PreviewProvider {
 //                               .frame(width: 80, height: 80, alignment: .center)
 
 //                       }
-
